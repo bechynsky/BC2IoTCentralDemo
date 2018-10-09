@@ -106,7 +106,6 @@ namespace BC2IoTCentralDemo
                 
                 if (data.Length > 0)
                 {
-                    // data = $"{{\"device\":\"{device}\",\"sensor\":\"{sensor}\",\"sensorInfo\":\"{sensorInfo}\",\"measurement\":\"{measurement}\",\"value\":{value}}}"; 
                     Message payload = new Message(System.Text.Encoding.UTF8.GetBytes(data));
                     await dc.SendEventAsync(payload);
                     
